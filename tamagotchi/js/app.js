@@ -24,9 +24,9 @@ class Tamagotchi {
   //ageing
   getOlder() {
       this.age++
+      return this.age
 
   }
-
   // eating
     eat() {
       this.hunger --
@@ -54,7 +54,11 @@ class Tamagotchi {
       console.log("WooHoo!")
       console.log(this.boredom)
     }
+    hungry() {
 
+      setInterval(tommie.hunger ++, 3000)
+      console.log(tommie.hunger)
+    }
 }
 
 //new
@@ -64,7 +68,7 @@ console.log(tommie)
 
 const ageCounter = setInterval(tommie.getOlder, 3000)
 
-console.log(ageCounter)
+console.log(tommie.getAge)
 
 // tommie.eat()
 // tommie.drink()
