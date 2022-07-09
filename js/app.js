@@ -54,7 +54,7 @@ class Game {
       this.hunger ++
       document.getElementById("hunger").innerHTML = ++hunger
       if (hunger == 10) {
-        clearInterval(hunger)
+        clearInterval(tommie.increaseHunger)
         alert(`${name} starved to death GAME OVER!`)
       }else{
       return this.hunger
