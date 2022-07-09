@@ -91,12 +91,21 @@ const tommie = new Game(0, "Tamagotchi.name", 0, 0, 0)
 //
 //dsetintervals
 start = () => {
-setInterval(tommie.getOlder, 3000)
+setInterval(tommie.getOlder, 7500)
 
 setInterval(tommie.increaseHunger, 4000)
 setInterval(tommie.increaseBoredom, 5000)
 setInterval(tommie.increaseSleepiness, 6000)
 }
+// if (boredom = 10 || hunger = 10 || sleepiness = 10){
+//   clearInterval(boredom)
+//   clearInterval(hunger)
+//   clearInterval(sleepiness)
+// }else{
+//   return boredom
+//   return hunger
+//   return sleepiness
+// }
 
 
 
