@@ -5,6 +5,9 @@ let hunger = 0
 let sleepiness = 0
 let boredom = 0
 let name = prompt("what will you name your Tamagotchi?")
+if (name != null){
+  document.getElementById("name").innerHTML = name
+}
 //crete Tamagotchi class
 class Game {
 

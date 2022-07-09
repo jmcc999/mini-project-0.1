@@ -5,8 +5,8 @@ body {
 
   background-repeat: no-repeat;
   background-size: cover;
-  justify-content: center;
+text-align: center;
 }
-#buttons {
-
+div {
+  text-align: center;
 }
