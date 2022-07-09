@@ -94,8 +94,8 @@ start = () => {
 setInterval(tommie.getOlder, 3000)
 
 setInterval(tommie.increaseHunger, 4000)
-setInterval(tommie.increaseBoredom, 4000)
-setInterval(tommie.increaseSleepiness, 4000)
+setInterval(tommie.increaseBoredom, 5000)
+setInterval(tommie.increaseSleepiness, 6000)
 }
 
 
