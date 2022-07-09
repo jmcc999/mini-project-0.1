@@ -4,87 +4,100 @@ let age = 0
 let hunger = 0
 let sleepiness = 0
 let boredom = 0
-
-
-
+let name = prompt("what will you name your Tamagotchi?")
 //crete Tamagotchi class
-class Tamagotchi {
+class Game {
 
-  constructor(age, name, hunger, sleepiness, boredom){
+  constructor(age, hunger, sleepiness, boredom){
 
     this.age = age
-    this.name = prompt("what will you name your pet?")
     this.hunger = hunger
     this.sleepiness = sleepiness
     this.boredom = boredom
   }
   //methods
   //ageing
-
   getOlder() {
       this.age++
-      document.getElementById("age").innerHTML += Tamagotchi.age
+      document.getElementById("age").innerHTML = ++age
       return this.age
   }
 
-  // getAge() {
-  // document.getElementById("age").innerHTML += "this.age"
-
-  // eating
     eat() {
       this.hunger --
-      console.log("NOMNOMNOM!")
-      console.log(this.hunger)
+      document.getElementById("hunger").innerHTML = --hunger
+      // console.log("NOMNOMNOM!")
+      // console.log(this.hunger)
     }
-
   //drinking
-
-
   //sleeping
     sleep() {
       this.sleepiness --
-      console.log("zZZZZZzzZZZZzzzzZZZ")
-      console.log(this.sleepiness)
+      document.getElementById("sleepiness").innerHTML = --sleepiness
+      // console.log("zZZZZZzzZZZZzzzzZZZ")
+      // console.log(this.sleepiness)
     }
 
   // playing
     play() {
       this.boredom --
-      console.log("WooHoo!")
-      console.log(this.boredom)
-    }
-    increaseHunger() {
-      this.hunger = hunger++
-      return this.hunger
-    }
-    increaseBoredom() {
-      this.boredom ++
+      document.getElementById("boredom").innerHTML = --boredom
+      return this.boredom
+      // console.log("WooHoo!")
+      // console.log(this.boredom)
     }
 
+    increaseHunger() {
+      this.hunger ++
+      document.getElementById("hunger").innerHTML = ++hunger
+      if (hunger == 10) {
+        clearInterval(hunger)
+        alert(`${name} starved to death GAME OVER!`)
+      }else{
+      return this.hunger
+     }
+    }
     increaseSleepiness() {
       this.sleepiness++
+      document.getElementById("sleepiness").innerHTML = ++sleepiness
+      if (sleepiness == 10) {
+        clearInterval(sleepiness)
+        alert(`${name} fainted GAME OVER!`)
+      }else{
+      return this.sleepiness
+     }
+  }
+    increaseBoredom() {
+      this.boredom ++
+      document.getElementById("boredom").innerHTML = ++boredom
+      if (boredom == 10) {
+        clearInterval(boredom)
+        alert(`${name} left to play with someone else GAME OVER!`)
+      }else{
+      return this.boredom
+     }
     }
+
+
 }
 
-//new
-const tommie = new Tamagotchi(0, "Tamagotchi.name", 0, 0, 0)
+//instantiatestiate
+const tommie = new Game(0, "Tamagotchi.name", 0, 0, 0)
 //
-console.log(tommie)
+// console.log(tommie)
 //
-const ageCounter = setInterval(tommie.getOlder, 3000)
-//
-// console.log(tommie.getAge)
-setInterval(tommie.increaseHunger, 1000)
-console.log(hunger)
+//dsetintervals
+start = () => {
+setInterval(tommie.getOlder, 3000)
+
+setInterval(tommie.increaseHunger, 4000)
+setInterval(tommie.increaseBoredom, 4000)
+setInterval(tommie.increaseSleepiness, 4000)
+}
+
+
+
 // tommie.eat()
 // tommie.drink()
 // tommie.sleep()
 // tommie.play()
-// const hungry = () => {
-//   setInterval(tommie.increaseHunger++, 3000)
-//   return tommie.hunger
-//   console.log(tommie.hunger)
-// }
-class Game {
-
-    }
