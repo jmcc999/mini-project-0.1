@@ -1,12 +1,33 @@
 body {
   color: white;
-  background: url("https://images.unsplash.com/photo-1596237563267-84ffd99c80e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  background: url("/Users/owner/Desktop/SEcourse/sei/projects/mini-project-0.1/tamagotchi/img/michael-krahn-eGD69I3ODC4-unsplash.jpg");
   /* Photo by <a href="https://unsplash.com/@michael_g_krahn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Krahn</a> on <a href="https://unsplash.com/s/photos/forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
-
   background-repeat: no-repeat;
   background-size: cover;
-text-align: center;
-}
-div {
   text-align: center;
+}
+.info {
+
+
+}
+.action_buttons {
+
+}
+.tommie {
+
+  width: 100px;
+  height: 100px;
+  background: url("/Users/owner/Desktop/SEcourse/sei/projects/mini-project-0.1/tamagotchi/img/bird.jpeg");
+  position: relative;
+  animation-name: tommie;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes tommie {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:400px; top:0px;}
+  75%  {left:600px; top:0px;}
+  100% {left:0px; top:0px;}
 }
