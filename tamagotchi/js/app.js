@@ -2,7 +2,6 @@
 // set vars
 let age = 0
 let hunger = 0
-let thirst = 0
 let sleepiness = 0
 let boredom = 0
 
@@ -11,22 +10,26 @@ let boredom = 0
 //crete Tamagotchi class
 class Tamagotchi {
 
-  constructor(age, name, hunger, thirst, sleepiness, boredom){
+  constructor(age, name, hunger, sleepiness, boredom){
 
     this.age = age
     this.name = prompt("what will you name your pet?")
     this.hunger = hunger
-    this.thirst = thirst
     this.sleepiness = sleepiness
     this.boredom = boredom
   }
   //methods
   //ageing
+
   getOlder() {
       this.age++
+      document.getElementById("age").innerHTML += Tamagotchi.age
       return this.age
-
   }
+
+  // getAge() {
+  // document.getElementById("age").innerHTML += "this.age"
+
   // eating
     eat() {
       this.hunger --
@@ -35,11 +38,7 @@ class Tamagotchi {
     }
 
   //drinking
-    drink() {
-      this.thirst --
-      console.log("Gulp!")
-      console.log(this.thirst)
-    }
+
 
   //sleeping
     sleep() {
@@ -54,27 +53,38 @@ class Tamagotchi {
       console.log("WooHoo!")
       console.log(this.boredom)
     }
-    hungry() {
+    increaseHunger() {
+      this.hunger = hunger++
+      return this.hunger
+    }
+    increaseBoredom() {
+      this.boredom ++
+    }
 
-      setInterval(tommie.hunger ++, 3000)
-      console.log(tommie.hunger)
+    increaseSleepiness() {
+      this.sleepiness++
     }
 }
 
 //new
-const tommie = new Tamagotchi(0, Tamagotchi.name, 0, 0, 0, 0)
-
+const tommie = new Tamagotchi(0, "Tamagotchi.name", 0, 0, 0)
+//
 console.log(tommie)
-
+//
 const ageCounter = setInterval(tommie.getOlder, 3000)
-
-console.log(tommie.getAge)
-
+//
+// console.log(tommie.getAge)
+setInterval(tommie.increaseHunger, 1000)
+console.log(hunger)
 // tommie.eat()
 // tommie.drink()
 // tommie.sleep()
 // tommie.play()
-
+// const hungry = () => {
+//   setInterval(tommie.increaseHunger++, 3000)
+//   return tommie.hunger
+//   console.log(tommie.hunger)
+// }
 class Game {
 
     }
